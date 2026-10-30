@@ -1,66 +1,107 @@
 
-# AI Job Copilot
+# JobCopilot 🚀
 
-AI Job Copilot is a Java Spring Boot web application that helps students manage job applications and prepare for internships.
+A Job Application Tracking Dashboard built to help students organize and manage their internship and job applications.
 
-## Features
+## ✨ Features
 
-- Add and manage job applications
-- Track application status: Applied, Interview, Offer, and Rejected
 - Dashboard with application statistics
-- Skill Match Calculator using keyword matching
-- Interview Question Generator using predefined questions
-- Save application data in an H2 database
+- Add new job applications
+- Update application status
+- Delete applications
+- Search applications by company name
+- Filter applications by status
+- Persistent data storage using H2 Database
+- Basic keyword-based job matching
 
-## Technologies Used
+## 🛠️ Tech Stack
 
-- Java
+**Backend**
+- Java 21
 - Spring Boot
 - Spring Data JPA
-- H2 Database
-- HTML, CSS, JavaScript
 - Maven
 
-## How to Run
+**Database**
+- H2 Database
 
-1. Install JDK 21 or a compatible Java version.
-2. Clone this repository:
+**Frontend**
+- HTML
+- CSS
+- JavaScript
 
-   ```bash
-   git clone https://github.com/vanshikachaudhary92/AI-Job-Copilot.git
-   ```
+## 📁 Project Structure
 
-3. Open the project folder in VS Code.
-4. Run this command in the terminal on Windows:
+```text
+jobcopilot/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/vanshika/jobcopilot/
+│       └── resources/
+│           ├── static/
+│           │   └── index.html
+│           └── application.properties
+├── data/
+├── pom.xml
+└── README.md
+```
 
-   ```powershell
-   .\mvnw.cmd spring-boot:run
-   ```
+## ⚙️ Getting Started
 
-5. Open http://localhost:8080 in your browser.
+### Prerequisites
+- Java 21
+- Git
 
-## API Endpoints
+### Run Locally
+
+1. Clone the repository:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+2. Open the project folder:
+
+```bash
+cd jobcopilot
+```
+
+3. Run the application:
+
+```bash
+./mvnw spring-boot:run
+```
+
+On Windows PowerShell:
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+4. Open your browser:
+
+```text
+http://localhost:8080
+```
+
+## 🔗 API Endpoints
 
 | Method | Endpoint | Description |
 |---|---|---|
-| GET | `/api/jobs` | View all job applications |
-| POST | `/api/jobs` | Add a job application |
-| PUT | `/api/jobs/{id}/status?status=Interview` | Update application status |
+| GET | `/api/jobs` | Get all applications |
+| POST | `/api/jobs` | Add an application |
+| PUT | `/api/jobs/{id}/status` | Update application status |
 | DELETE | `/api/jobs/{id}` | Delete an application |
 
-## Future Improvements
+## 💡 Future Improvements
 
 - AI-powered resume and job description matching
-- Missing-skill recommendations
-- AI-generated interview questions and feedback
-- Resume analysis
+- Skill gap analysis
+- Interview preparation assistance
+- User authentication
+- Cloud database integration
 
-## Author
+## 👩‍💻 Author
 
 Vanshika Chaudhary
-
-GitHub: https://github.com/vanshikachaudhary92
-
----
-
-Note: The current skill matcher uses keyword matching, and the interview question generator uses predefined questions. Real AI integration is planned.
